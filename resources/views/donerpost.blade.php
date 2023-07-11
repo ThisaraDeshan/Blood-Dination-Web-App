@@ -50,7 +50,7 @@
                           <h6 class="card-subtitle mb-2">{{$post->donername}}</h6>
                           <h6 class="card-subtitle mb-2 text-muted">{{$post->doneraddress}}</h6>
                           <a href="#" class="btn">Contact Now</a>
-                          <a href="#" class="btn">Send Message</a>
+                          <a href="{{route('chatify')}}" class="btn">Send Message</a>
                         </div>
                     </div>
                     @endforeach
