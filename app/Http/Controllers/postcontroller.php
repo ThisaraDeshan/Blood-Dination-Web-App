@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\contactus;
 use App\Models\donerlist;
 use App\Models\neederlist;
+use App\Models\sendmessage;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class postcontroller extends Controller
@@ -12,7 +14,7 @@ class postcontroller extends Controller
     public function donerstore(Request $request)
     {
         donerlist::create([
-            'user-id'=>auth()->user()->id,
+            'userid'=>auth()->user()->id,
             'donername' => $request->donername,
             'doneraddress' => $request->doneraddress,
             'contactnumber' => $request->donercontactnumber,
@@ -111,6 +113,20 @@ class postcontroller extends Controller
         ]);
 
         return redirect(route('contactus'))->with('success','Sent Message Successfully. Thank You! ');
+      }
+
+      public function sendMessage($userid)
+      {
+
+        sendmessage::create([
+            'neederid' => auth()->user()->id,
+            'postdonerid' => $userid,
+            'needername' => auth()->user()->name,
+            'needermessage' => "I need blood donation.please help..."
+        ]);
+
+
+        return redirect(route('donerpost'))->with('success','Sent Message Successfully. Thank You! ');
       }
 
 

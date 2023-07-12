@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('neederlists', function (Blueprint $table) {
+        Schema::create('sendmessages', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('neederid');
+            $table->unsignedBigInteger('postdonerid');
             $table->string('needername');
-            $table->string('neederaddress');
-            $table->string('needercontactnumber');
-            $table->string('neederage');
-            $table->string('neederlocation');
-            $table->string('neederbloodtype');
             $table->string('needermessage');
             $table->timestamps();
+
+
 
 
         });
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('neederlists');
+        Schema::dropIfExists('sendmessages');
     }
 };

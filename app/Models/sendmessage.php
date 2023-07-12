@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class neederlist extends Model
+class sendmessage extends Model
 {
     use HasFactory;
+
     protected $fillable=[
 
+        'neederid',
+        'postdonerid',
         'needername',
-        'neederaddress',
-        'needercontactnumber',
-        'neederage',
-        'neederlocation',
-        'neederbloodtype',
         'needermessage'
     ];
 }

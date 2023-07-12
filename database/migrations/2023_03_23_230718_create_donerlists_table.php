@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('donerlists', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user-id');
+            $table->unsignedBigInteger('userid');
             $table->string('donername');
             $table->string('doneraddress');
             $table->string('contactnumber');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('donerpostdescription');
             $table->timestamps();
 
-            $table->foreign('user-id')->references('id')->on('users');
+            $table->foreign('userid')->references('id')->on('users');
         });
     }
 

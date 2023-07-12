@@ -48,3 +48,7 @@ route::get('/delete/{id}',[admincontroller::class,'userdelete'])->name('delete')
 route::get('/postdelete/{id}',[admincontroller::class,'postdelete'])->name('postdelete');
 
 route::get('/admindonerposts',[HomeController::class,'admindonerposts'])->name('admindonerposts');
+
+route::get('/{userid}/sendmessage',[postcontroller::class,'sendMessage'])->name('sendmessage');
+
+route::get('/notifications',[HomeController::class,'notifications'])->name('notifications');

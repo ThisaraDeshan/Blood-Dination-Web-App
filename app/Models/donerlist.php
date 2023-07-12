@@ -10,7 +10,7 @@ class donerlist extends Model
     use HasFactory;
 
     protected $fillable =[
-        'user-id',
+        'userid',
         'donername',
         'doneraddress',
         'contactnumber',
