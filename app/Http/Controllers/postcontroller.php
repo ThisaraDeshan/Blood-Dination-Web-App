@@ -13,6 +13,18 @@ class postcontroller extends Controller
 {
     public function donerstore(Request $request)
     {
+
+        $request->validate([
+            'donername'=>'required|string|max:255|min:5',
+            'doneraddress'=>'required|string|max:255|min:5',
+            'contactnumber'=>'required|string',
+            'donerage'=> 'required|integer',
+            'donerlocationlatitude'=>'required',
+            'donerbloodtype'=>'required',
+            'donerposttitle'=>'required|max:255',
+            'donerpostdescrition'=>'required|max:511'
+        ]);
+
         donerlist::create([
             'userid'=>auth()->user()->id,
             'donername' => $request->donername,

@@ -37,18 +37,18 @@
             @guest
                 @if (Route::has('login'))
                     <li class="nav-item m-2">
-                        <a class="nav-link btn" href="{{ route('login') }}" style="font-size: 15px; font-weight:700;">{{ __('Login') }}</a>
+                        <a class="nav-link btn mr-4" href="{{ route('login') }}" style="font-size: 15px; font-weight:700; color:#fff;">{{ __('Login') }}</a>
                     </li>
                 @endif
 
                 @if (Route::has('register'))
                     <li class="nav-item m-2">
-                        <a class="nav-link btn" href="{{ route('register') }}" style="font-size: 15px; font-weight:700;">{{ __('Register') }}</a>
+                        <a class="nav-link btn mr-4" href="{{ route('register') }}" style="font-size: 15px; font-weight:700; color:#fff;">{{ __('Register') }}</a>
                     </li>
                 @endif
             @else
                 <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle mr-4" style="font-size: 15px; font-weight:700; color:#fff;" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
 
@@ -77,52 +77,52 @@
         @yield('content')
     </main>
 
-    <div class="container mt-4 mb-4" style=" border-radius:30px;">
+    <div class="container-fluid mt-4 mb-4" style=" border-radius:30px;">
         <div class="row">
                 <div class="col-12">
-                    <div class="m-5" style=" border: 2px solid #fff; border-radius:30px;">
+                    <div class="" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
                         <h1 class="title m-4" style=" text-align:center; color: #fff; font-weight:700;">If You Want Donate Blood</h1>
-                        <p class="m-2" style=" text-align:center; color: #fff; font-weight:600;">Between 18 & 55 years of Age ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Weight more than 50Kg ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">It has been 4 months since the previous blood donation ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Blood hemoglobin level 12.5g/dl or more , </p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Not pregnant ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Healthy ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">It has been at least 3 months since returning to SriLanka after Travelling abroad ,</p>
-                        <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Free from risky behavior ,</p>
-                        <p class="m-5" style="font-size:30px; text-align:center;color: #fff; font-weight:700;">Being a person is essential.</p>
+                        <p class="" style=" text-align:center; color: #fff; font-weight:600;">Between 18 & 55 years of Age ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Weight more than 50Kg ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">It has been 4 months since the previous blood donation ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Blood hemoglobin level 12.5g/dl or more , </p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Not pregnant ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Healthy ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">It has been at least 3 months since returning to SriLanka after Travelling abroad ,</p>
+                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Free from risky behavior ,</p>
+                        <p class="" style="font-size:30px; text-align:center;color: #fff; font-weight:700;">Being a person is essential.</p>
                     </div>
                 </div>
 
 
 
                 <div class="col-12">
-                    <div class="m-5" style=" border: 2px solid #fff; border-radius:30px;">
-                        <h1 class="title m-4" style=" text-align:center; color: #fff; font-weight:700;">If There Is A Problem?</h1>
-                        <p class="m-2" style="  text-align:center; color: #fff; font-weight:600;">If there is any problem after donating blood and you develop a Non-Communicable disease withi two weeks , contact the parshad Blood Center you have joined or the blood bank of the nearest Hospital.</p>
+                    <div class="mt-5" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
+                        <h1 class="title" style=" text-align:center; color: #fff; font-weight:700;">If There Is A Problem?</h1>
+                        <p class="" style="  text-align:center; color: #fff; font-weight:600;">If there is any problem after donating blood and you develop a Non-Communicable disease withi two weeks , contact the parshad Blood Center you have joined or the blood bank of the nearest Hospital.</p>
                     </div>
                 </div>
                     <div class="col-12">
-                        <div class="m-5" style=" border: 2px solid #fff; border-radius:30px;">
-                            <h1 class="title m-4" style=" text-align:center; color: #fff; font-weight:700;">Contact Numbers</h1>
-                            <p class="m-2" style=" text-align:center; color: #fff; font-weight:600;">National Blood Center : 011-2369931-4</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Kaburugamuwa : 011-2227232</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Kandy : 081-2222261</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Badulla : 055-2222121</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Ampara : 063-2223914</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Chilaw : 032-2223261</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Hambanthota : 047-2222016</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Kalutara : 034-2236529</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Kurunegala : 037-2229617</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Karapitiya : 091-2226066</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Maharagama : 011-2849525</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Peradeniya : 081-2388261</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Ragama : 011-2960535</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Rathnapura : 045-2226592</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Anuradhapura : 025-2236424</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Jaffna : 021-2223063</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Trincomalee : 026-2222261</p>
-                            <p class="m-2" style="text-align:center;color: #fff; font-weight:600;">Vauniya : 024-2222261</p>
+                        <div class="mt-5" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
+                            <h1 class="title" style=" text-align:center; color: #fff; font-weight:700;">Contact Numbers</h1>
+                            <p class="" style=" text-align:center; color: #fff; font-weight:600;">National Blood Center : 011-2369931-4</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kaburugamuwa : 011-2227232</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kandy : 081-2222261</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Badulla : 055-2222121</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Ampara : 063-2223914</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Chilaw : 032-2223261</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Hambanthota : 047-2222016</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kalutara : 034-2236529</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kurunegala : 037-2229617</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Karapitiya : 091-2226066</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Maharagama : 011-2849525</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Peradeniya : 081-2388261</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Ragama : 011-2960535</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Rathnapura : 045-2226592</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Anuradhapura : 025-2236424</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Jaffna : 021-2223063</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Trincomalee : 026-2222261</p>
+                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Vauniya : 024-2222261</p>
                         </div>
                     </div>
             </div>
