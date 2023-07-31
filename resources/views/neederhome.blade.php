@@ -107,9 +107,9 @@ $(document).ready(function(){
 </script>
 
 <script>
-      function initialize(address) {
+      function initialize() {
       var geocoder = new google.maps.Geocoder();
-      var address     // Replace with the address you want to convert
+      var address ="Anuradhapura";    // Replace with the address you want to convert
 
       geocoder.geocode({ 'address': address }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
@@ -134,7 +134,7 @@ $(document).ready(function(){
       });
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize(0));
+    google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 <style>
