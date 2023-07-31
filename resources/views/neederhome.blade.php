@@ -104,9 +104,10 @@ $(document).ready(function(){
     });
     });
 
+</script>
 
-
-    function initialize(address) {
+<script>
+      function initialize(address) {
       var geocoder = new google.maps.Geocoder();
       var address     // Replace with the address you want to convert
 
@@ -134,10 +135,7 @@ $(document).ready(function(){
     }
 
     google.maps.event.addDomListener(window, 'load', initialize(0));
-
 </script>
-
-
 
 <style>
   .btn11{
