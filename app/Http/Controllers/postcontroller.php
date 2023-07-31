@@ -55,66 +55,6 @@ class postcontroller extends Controller
         return redirect(route('index'))->with('success','Blood Needer Saved Successfully');
     }
 
-    public function search(Request $request){
-
-        if($request->ajax()){
-
-            $data=donerlist::where('donername','like','%'.$request->search.'%')
-            ->orwhere('donerbloodtype','like','%'.$request->search.'%')
-            ->orwhere('doneraddress','like','%'.$request->search.'%')->get();
-
-
-            $output='';
-        if(count($data)>0){
-
-
-
-
-             $output ='
-            <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Doner Name</th>
-                <th scope="col">Doner Blood Type</th>
-                <th scope="col">Doner Address</th>
-            </tr>
-            </thead>
-            <tbody>';
-
-                foreach($data as $row){
-                    $output .='
-                    <tr>
-                    <th scope="row">'.$row->donername.'</th>
-                    <td>'.$row->donerbloodtype.'</td>
-                    <td>'.$row->doneraddress.'</td>
-                    </tr>
-                    ';
-                }
-
-
-
-         $output .= '
-             </tbody>
-            </table>';
-
-
-
-        }
-        else{
-
-            $output .='No results';
-
-        }
-
-        return $output;
-
-        }
-
-
-
-
-      }
-
       public function contactusmessage(Request $request)
       {
         contactus::create([
@@ -138,7 +78,7 @@ class postcontroller extends Controller
         ]);
 
 
-        return redirect(route('donerpost'))->with('success','Sent Message Successfully. Thank You! ');
+        return redirect(route('neederhome'))->with('success','Sent Message Successfully. Thank You! ');
       }
 
 

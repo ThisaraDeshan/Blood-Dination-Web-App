@@ -196,9 +196,7 @@ section{
         padding: 0 3%;
         transition: .2s;
     }
-    .hero-text{
-        padding-top: 115px;
-    }
+
     .hero-img{
         text-align: center;
     }
@@ -368,4 +366,9 @@ section{
   .btn11:hover{
     background-color: red;
     color: #000000;
+  }
+
+  #map {
+    width: 100%;
+    height: 500px;
   }

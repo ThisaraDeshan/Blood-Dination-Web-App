@@ -52,3 +52,13 @@ route::get('/admindonerposts',[HomeController::class,'admindonerposts'])->name('
 route::get('/{userid}/sendmessage',[postcontroller::class,'sendMessage'])->name('sendmessage');
 
 route::get('/notifications',[HomeController::class,'notifications'])->name('notifications');
+
+route::get('/search2',[searchcontroller::class,'search2'])->name('search2');
+
+route::get('bestDonors',[HomeController::class,'bestDonors'])->name('bestDonors');
+
+route::get('/neederhome',[HomeController::class,'neederhome'])->name('neederhome');
+
+route::get('/needer-About',[HomeController::class,'neederAbout'])->name('neederAbout');
+
+route::get('needer-Contact',[HomeController::class,'neederContact'])->name('neederContact');

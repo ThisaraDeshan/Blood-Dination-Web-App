@@ -22,14 +22,14 @@
 
     <header>
 
-            <a href="./" class="logo">Blood Donation</a>
+            <a href="{{route('neederhome')}}" class="logo">Blood Donation</a>
 
         <ul class="navlist">
 
-            <li><a href="{{route('index')}}">Donate Now</a></li>
-            <li><a href="{{route('donerpost')}}">Search Blood</a></li>
-            <li><a href="{{route('aboutus')}}">About Us</a></li>
-            <li><a href="{{route('contactus')}}">Contact Us</a></li>
+            <li><a href="{{route('bestDonors')}}">Best Donors</a></li>
+            <li><a href="{{route('neederhome')}}">Search Blood</a></li>
+            <li><a href="{{route('neederAbout')}}">About Us</a></li>
+            <li><a href="{{route('neederContact')}}">Contact Us</a></li>
 
         </ul>
 
@@ -152,9 +152,6 @@
         </div>
         <ul class="list">
           <li>
-            <a href="{{route('index')}}">Donate now</a>
-          </li>
-          <li>
             <a href="{{route('donerpost')}}">Search Blood</a>
           </li>
           <li>
@@ -180,7 +177,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANnMyu3xUZrGeN_RAQFTqApGqdQ0RrRpE&callback=myMap"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

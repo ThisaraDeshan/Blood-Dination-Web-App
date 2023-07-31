@@ -20,36 +20,78 @@ class searchcontroller extends Controller
             $output='';
         if(count($data)>0){
 
-             $output ='
-                <table class="table">
-                <thead>
-                <tr>
-                    <th class="text-center" scope="col" style="color:#fff;">Doner Name</th>
-                    <th class="text-center" scope="col" style="color:#fff;">Doner Blood Type</th>
-                    <th class="text-center" scope="col" style="color:#fff;">Doner Address</th>
-                    <th class="text-center" scope="col" style="color:#fff;">Action</th>
-                    <th class="text-center" scope="col" style="color:#fff;"></th>
-                </tr>
-                </thead>
-                <tbody>';
+            $output .='<div class="row" style="display:flex; justify-content:space-between; align-items:stretch;">';
 
                     foreach($data as $row){
                         $output .='
-                        <tr>
-                        <th class="text-center" style="color:#fff;" scope="row">'.$row->donername.'</th>
-                        <td class="text-center" style="color:#fff;" >'.$row->donerbloodtype.'</td>
-                        <td class="text-center" style="color:#fff;" >'.$row->doneraddress.'</td>
-                        <td><a style="width:100%;" href="" class="m-1 btn btn-primary btn-sm">Inform Donor</a></td>
-                        <td><a style="width:100%;" href="location" class="m-1 btn btn-success btn-sm">View Location</a></td>
-                        </tr>
+
+
+
+                                <div class="col-4 mt-4 mb-4" style="width: 18rem;">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">'.$row->donername.'</h5>
+                                            <p class="card-text">'.$row->donerbloodtype.'</p>
+                                            <h6 class="card-subtitle mb-2 text-muted">'.$row->donerposttitle.'</h6>
+                                            <p class="card-text">'.$row->donerpostdescription.'</p>
+                                            <a id="location" href="" class="btn">View Location On Map</a>
+
+                                            <a href="'.route('sendmessage' , $row->userid).'" class="btn">Send Message</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                         ';
                     }
 
+                    $output.='</div>';
 
 
-             $output .= '
-                 </tbody>
-                </table>';
+
+
+        }
+        else{
+
+            $output .='No results';
+
+        }
+
+        return $output;
+
+        }
+
+
+
+
+      }
+
+      public function search2(Request $request){
+
+        if($request->ajax()){
+
+            $data=donerlist::where('donername','like','%'.$request->search.'%')
+            ->orwhere('donerbloodtype','like','%'.$request->search.'%')
+            ->orwhere('doneraddress','like','%'.$request->search.'%')->get();
+
+
+            $output='';
+        if(count($data)>0){
+
+                    foreach($data as $row){
+                        $output .='
+                        <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">'.$row->donername.'</h5>
+                          <p class="card-text">'.$row->donerbloodtype.'</p>
+                          <h6 class="card-subtitle mb-2 text-muted">'.$row->donerposttitle.'</h6>
+                          <p class="card-text">'.$row->donerpostdescription.'</p>
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+                        ';
+                    }
 
 
 

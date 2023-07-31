@@ -38,7 +38,7 @@ class HomeController extends Controller
         {
             $posts = donerlist::all();
 
-            return view('donerpost',compact('posts'));
+            return view('neederhome',compact('posts'));
 
         }
         else
@@ -88,6 +88,28 @@ class HomeController extends Controller
         $rows = sendmessage::all();
 
         return view('notifications', compact('rows'));
+    }
+
+    public function bestDonors()
+    {
+        $posts = donerlist::all();
+        return view('bestDonors',compact('posts'));
+    }
+
+    public function neederhome()
+    {
+        $posts = donerlist::all();
+        return view('neederhome',compact('posts'));
+    }
+
+    public function neederAbout()
+    {
+        return view('neederAbout');
+    }
+
+    public function neederContact()
+    {
+        return view('neederContact');
     }
 
 }

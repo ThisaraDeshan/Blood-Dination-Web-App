@@ -66,7 +66,7 @@ section{
 
 }
 .hero-text{
-    padding-bottom: 50%;
+    padding-bottom: 0%;
 }
 .hero-text h5{
     font-size: 14px;
@@ -200,9 +200,6 @@ section{
         padding: 0 3%;
         transition: .2s;
     }
-    .hero-text{
-        padding-top: 115px;
-    }
     .hero-img{
         text-align: center;
     }
@@ -311,7 +308,6 @@ body {
 .container {
 
     margin: 100px auto;
-    background: linear-gradient(245.59deg,  #ED213A 28.53%, #93291E 75.52%);
     border-radius: 30px;
     padding-top: 40px;
     box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5);
@@ -403,7 +399,7 @@ a:hover {
 
 .btn:hover {
     background: #000000;
-    color: #000000;
+    color: #ffffff;
 }
 
 .select-field {

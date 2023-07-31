@@ -16,43 +16,6 @@
     </div>
 </div>
 
-
-
-<div class="container mb-4" style="margin-top:50px; border-radius:30px; width:80%;">
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <h3 class="text-center" style="color: #ffffff;">Search Blood here!</h3><hr>
-            <div class="form-group">
-                <h4 style="color: #fff;">Type Blood Type Or Location</h4>
-                <input type="text" name="search" id="search" placeholder="Type Blood Type Or Location" class="form-control" onfocus="this.value=''">
-            </div>
-            <div id="search_list"></div>
-        </div>
-        <div class="col-lg-2"></div>
-
-
-    </div>
-</div>
-
-<div class="col-md-4">
-
-</div>
-<div class="col-md-4">
-    @if (\Session::has('success'))
-<div class="alert alert-success">
-<ul>
-    <li>{!! \Session::get('success') !!}</li>
-</ul>
-</div>
-@endif
-</div>
-<div class="col-md-4">
-
-</div>
-
-
-
 <div class="container" style="border-radius: 30px; width:auto;">
     <div class="row">
         @foreach ($posts as $post)
