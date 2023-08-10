@@ -36,21 +36,77 @@ resizeSearchBar();
 window.addEventListener('resize', resizeSearchBar);
 
 
-//search bars
-$(document).ready(function(){
- $('#search').on('keyup',function(){
+/* //search bars
+(document).ready(function(){
+ ('#search').on('keyup',function(){
      var query= $(this).val();
-     $.ajax({
+     ajax({
         url:"search",
         type:"GET",
         data:{'search':query},
         success:function(data){
-            $('#search_list').html(data);
+            ('#search_list').html(data);
         }
  });
  //end of ajax call
 })
-});
+}); */
 
-// Initialize and add the map
 
+
+/*     function initialize() {
+        var geocoder = new google.maps.Geocoder();
+        var address = "Anuradhapura,SriLanka";    // Replace with the address you want to convert
+
+        geocoder.geocode({ 'address': address }, function (results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            var latitude = results[0].geometry.location.lat();
+            var longitude = results[0].geometry.location.lng();
+
+            // Display the latitude and longitude on the console
+            console.log('Latitude: ' + latitude);
+            console.log('Longitude: ' + longitude);
+
+            // You can use the latitude and longitude to display a map or perform other operations.
+            // For example, let's display a map centered at the obtained coordinates.
+            var mapOptions = {
+              center: { lat: latitude, lng: longitude },
+              zoom: 12,
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            new google.maps.Marker({
+              position: {lat: latitude, lng: longitude},
+              map:map
+          });
+
+          } else {
+            console.error('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize); */
+
+
+/*           //map
+    function showMap(lat,long)
+    {
+        var coord = {lat:lat,lng:long};
+
+        var map = new google.maps.Map(
+            document.getElementById("map2"),
+            {
+                zoom:13,
+                center:coord,
+            }
+        );
+
+        new google.maps.Marker({
+            position: coord,
+            map:map
+        });
+    }
+
+    showMap(7.877422,80.7003428); */

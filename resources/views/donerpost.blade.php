@@ -26,37 +26,11 @@
                           <p class="card-text">{{$post->donerpostdescription}}</p>
                           <h6 class="card-subtitle mb-2">{{$post->donername}}</h6>
                           <h6 class="card-subtitle mb-2 text-muted">{{$post->doneraddress}}</h6>
-                          <a href="#" class="btn">Contact Now</a>
-
-                          <a href="{{route('sendmessage' , $post->userid)}}" class="btn">Send Message</a>
-
-
                         </div>
                     </div>
                     @endforeach
     </div>
 </div>
-
-
-<div class="container">
-    <div class="row">
-
-
-        <div class="col-4">
-        </div>
-
-        <div id="map2" style="width: 100%; height:500px;" class="col-4 mt-4">
-
-        </div>
-        <div class="col-4">
-
-        </div>
-
-    </div>
-
-
-
-
 
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -70,83 +44,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<script>
-
-    //map
-    function showMap(lat,long)
-    {
-        var coord = {lat:lat,lng:long};
-
-        var map = new google.maps.Map(
-            document.getElementById("map2"),
-            {
-                zoom:13,
-                center:coord,
-            }
-        );
-
-        new google.maps.Marker({
-            position: coord,
-            map:map
-        });
-    }
-
-    showMap(7.877422,80.7003428);
-
-
-</script>
-<script>
-    //search bar
-
-
-$(document).ready(function(){
-     $('#search').on('keyup',function(){
-         var query= $(this).val();
-         $.ajax({
-            url:"search",
-            type:"GET",
-            data:{'search':query},
-            success:function(data){
-                $('#search_list').html(data);
-            }
-     });
-     //end of ajax call
-    });
-    });
-</script>
-
-
-</div>
-
-
-
-<style>
-  .btn11{
-    border: 1px solid red;
-    background-color: #ffffff;
-    color: #000;
-    border-radius: 40px;
-  }
-  .btn11:hover{
-    background-color: red;
-    color: #ffffff;
-  }
-</style>
-
-
-
-<style>
-    .btn11{
-      border: 1px solid rgb(255, 255, 255);
-      background-color: #0eaf37;
-      color: #ffffff;
-      font-weight: 700;
-      border-radius: 40px;
-    }
-    .btn11:hover{
-      background-color: rgb(255, 255, 255);
-      color: #000000;
-    }
-  </style>
 
 @endsection

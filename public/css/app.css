@@ -372,3 +372,27 @@ section{
     width: 100%;
     height: 500px;
   }
+
+  .btn11{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #0eaf37;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 40px;
+  }
+  .btn11:hover{
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+  }
+
+
+  .btn11{
+    border: 1px solid red;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 40px;
+  }
+  .btn11:hover{
+    background-color: red;
+    color: #ffffff;
+  }

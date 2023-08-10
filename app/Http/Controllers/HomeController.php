@@ -30,11 +30,11 @@ class HomeController extends Controller
     {
         $role =auth::user()->role;
 
-        if($role == '0')
+        if($role == 'Blood Donor')
         {
             return view('donerhome');
         }
-        if($role == '1')
+        if($role == 'Blood Needer')
         {
             $posts = donerlist::all();
 

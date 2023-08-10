@@ -65,49 +65,4 @@ class searchcontroller extends Controller
 
 
       }
-
-      public function search2(Request $request){
-
-        if($request->ajax()){
-
-            $data=donerlist::where('donername','like','%'.$request->search.'%')
-            ->orwhere('donerbloodtype','like','%'.$request->search.'%')
-            ->orwhere('doneraddress','like','%'.$request->search.'%')->get();
-
-
-            $output='';
-        if(count($data)>0){
-
-                    foreach($data as $row){
-                        $output .='
-                        <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                          <h5 class="card-title">'.$row->donername.'</h5>
-                          <p class="card-text">'.$row->donerbloodtype.'</p>
-                          <h6 class="card-subtitle mb-2 text-muted">'.$row->donerposttitle.'</h6>
-                          <p class="card-text">'.$row->donerpostdescription.'</p>
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
-                        </div>
-                      </div>
-                        ';
-                    }
-
-
-
-        }
-        else{
-
-            $output .='No results';
-
-        }
-
-        return $output;
-
-        }
-
-
-
-
-      }
 }

@@ -55,7 +55,7 @@
 
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                            <a class="dropdown-item" style="font-weight: 700;" href="{{route('notifications')}}">{{ __('Notifications') }}</a>
+
 
                                             <a class="dropdown-item" style="font-weight: 700;" href="{{ route('logout') }}"
                                                onclick="event.preventDefault();
