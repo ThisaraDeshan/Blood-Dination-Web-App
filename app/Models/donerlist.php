@@ -16,7 +16,6 @@ class donerlist extends Model
         'contactnumber',
         'donerage',
         'donerlocationlatitude',
-        'donerlocationlongitude',
         'donerbloodtype',
         'donerposttitle',
         'donerpostdescription',
