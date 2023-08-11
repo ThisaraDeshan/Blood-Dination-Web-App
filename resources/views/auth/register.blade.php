@@ -52,8 +52,8 @@
             <div class="select-field">
                 <i class="fas fa-tint" style="color: #000000;"></i>
                     <select class="form-select" name="accountType" aria-label="Default select example">
-                        <option value="0">Blood Doner</option>
-                        <option value="1">Blood Needer</option>
+                        <option value="Blood Donor">Blood Doner</option>
+                        <option value="Blood Needer">Blood Needer</option>
                       </select>
             </div>
 
