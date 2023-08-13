@@ -25,7 +25,7 @@ class postcontroller extends Controller
             'donerpostdescription' =>$request->donerpostdescription,
         ]);
 
-        return redirect(route('donorpost'))->with('success','Details Saved Successfully');
+        return redirect(route('donerpost'))->with('success','Details Saved Successfully');
     }
 
     public function neederstore(Request $request)
