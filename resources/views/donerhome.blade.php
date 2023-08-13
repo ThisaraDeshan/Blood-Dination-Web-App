@@ -17,7 +17,7 @@
 
 <div class="container">
     <h1 style="color: white;">Create Dorner Post</h1>
-    <form method="post" action="{{route('donerstore')}}" class="m-3">
+    <form method="POST" action="{{route('donerstore')}}" class="m-3">
         @csrf
         <div class="input-field">
             <i class="fas fa-user"></i>
@@ -62,7 +62,7 @@
 
 
 
-        <button type="submit" class="btn">Save & Create Donate Post</button>
+        <button  type="submit" class="btn">Save & Create Donate Post</button>
     </form>
 </div>
 

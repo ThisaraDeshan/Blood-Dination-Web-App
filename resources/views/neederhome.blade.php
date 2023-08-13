@@ -112,7 +112,71 @@ $(document).ready(function(){
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFVRMT8k_OWiqAHdWe42RdmojP6GsMv7U&libraries=places"></script>
 <script>
 
-    function initialize() {
+function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 6.906079, lng: 79.969628, title: 'Your Location'},
+                zoom: 8
+            });
+
+            // Add markers for additional locations
+            var locations = [
+                {lat: 6.8892617, lng: 79.865094, title: 'Central Blood Bank , Narahenpita.'},
+                {lat: 6.238841599433256, lng: 80.0542508, title: 'Blood Bank , Ambalangoda'},
+                {lat: 8.32581214357, lng: 80.4124385118, title: 'Blood Bank ,  Anuradhapura'},
+                {lat: 7.286318, lng: 80.631651, title: 'Blood Bank ,  Kandy'},
+                {lat: 6.991119, lng: 81.0516508, title: 'Blood Bank ,  Badulla'},
+                {lat: 6.124593, lng: 81.101074, title: 'Blood Bank ,  Hambanthota'},
+                {lat: 7.47962188721, lng: 80.3592147827, title: 'Blood Bank ,  Kurunegala'},
+                {lat: 6.705574, lng: 80.384734, title: 'Blood Bank ,  Rathnapura'},
+                {lat: 8.592200, lng: 81.196793, title: 'Blood Bank ,  Trincomalee'},
+                {lat: 5.9475544, lng: 80.5489361, title: 'Blood Bank ,  Matara'},
+
+                {lat: 5.9475544, lng: 80.7489361, title: 'Thisara (o+)'},
+                {lat: 6.949717, lng: 80.789107, title: 'Danushka (B+)'},
+                {lat: 8.7381572, lng: 80.47714719999999, title: 'Jaliya (AB)'},
+                {lat: 6.906079, lng: 79.969628, title: 'Vindya (A-)'},
+                {lat: 7.087310, lng: 80.014366, title: 'Sanduni (O-)'},
+
+
+                // Add more locations here
+            ];
+
+            var infowindows = []; // Array to store infowindows for each marker
+
+locations.forEach(function(location) {
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: location.title
+        /* icon: 'https://maps.google.com/mapfiles/ms/icons/hospitals.png' */
+    });
+
+    google.maps.event.addListener(marker, "rightclick", function() {
+        marker.setIcon('/img/location.png'); // set image path here...
+});
+
+    var infowindow = new google.maps.InfoWindow({
+        content: location.title
+    });
+
+    // Add click event listener to show infowindow on marker click
+    marker.addListener('click', function() {
+        closeAllInfoWindows(); // Close any open infowindows
+        infowindow.open(map, marker);
+    });
+
+    infowindows.push(infowindow);
+});
+
+function closeAllInfoWindows() {
+    infowindows.forEach(function(infowindow) {
+        infowindow.close();
+    });
+}
+}
+        initMap();
+
+/*     function initialize() {
       var geocoder = new google.maps.Geocoder();
       var address = "Malabe";
        // Replace with the address you want to convert
@@ -146,7 +210,7 @@ $(document).ready(function(){
       });
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initialize); */
 </script>
 
 
