@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>Notifications</h1>
+            <h1 style="text-shadow: 4px 4px 10px #000000;">Notifications</h1>
         </div>
         <div class="col-12">
             <table class="table table-hover" style="background: linear-gradient(245.59deg, #ED213A 28.53%, #93291E 75.52%);">

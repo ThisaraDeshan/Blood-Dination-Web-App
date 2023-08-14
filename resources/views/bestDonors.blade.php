@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    <h1 style="color: white; font-weight:700; text-align:center;">Our Best Donors</h1>
+    <h1 style="color: white; font-weight:700; text-align:center; text-shadow: 4px 4px 10px #000000;">Our Best Donors</h1>
     <div class="row" style="display:flex; justify-content:space-between; align-items:stretch;">
         @foreach ($posts as $post )
         <div class="col-md-6 col-lg-4 mt-5 mb-3" style="width:auto;">

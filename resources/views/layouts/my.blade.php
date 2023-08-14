@@ -22,14 +22,14 @@
 
     <header>
 
-            <a href="./" class="logo">Blood Donation</a>
+            <a style="text-shadow: 4px 4px 10px #000000;" href="./" class="logo">Blood Donation</a>
 
         <ul class="navlist">
 
-            <li><a href="{{route('index')}}">Donate Now</a></li>
-            <li><a href="{{route('donerpost')}}">Search Blood</a></li>
-            <li><a href="{{route('aboutus')}}">About Us</a></li>
-            <li><a href="{{route('contactus')}}">Contact Us</a></li>
+            <li><a style="text-shadow: 4px 4px 10px #000000;" href="{{route('index')}}">Donate Now</a></li>
+            <li><a style="text-shadow: 4px 4px 10px #000000;" href="{{route('donerpost')}}">Search Blood</a></li>
+            <li><a style="text-shadow: 4px 4px 10px #000000;" href="{{route('aboutus')}}">About Us</a></li>
+            <li><a style="text-shadow: 4px 4px 10px #000000;" href="{{route('contactus')}}">Contact Us</a></li>
 
         </ul>
 
@@ -84,16 +84,16 @@
         <div class="row">
                 <div class="col-12">
                     <div class="" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
-                        <h1 class="title m-4" style=" text-align:center; color: #fff; font-weight:700;">If You Want Donate Blood</h1>
-                        <p class="" style=" text-align:center; color: #fff; font-weight:600;">Between 18 & 55 years of Age ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Weight more than 50Kg ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">It has been 4 months since the previous blood donation ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Blood hemoglobin level 12.5g/dl or more , </p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Not pregnant ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Healthy ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">It has been at least 3 months since returning to SriLanka after Travelling abroad ,</p>
-                        <p class="" style="text-align:center;color: #fff; font-weight:600;">Free from risky behavior ,</p>
-                        <p class="" style="font-size:30px; text-align:center;color: #fff; font-weight:700;">Being a person is essential.</p>
+                        <h1 class="title m-4" style=" text-align:center; color: #000000; text-shadow: 4px 4px 10px #000000; font-weight:700;">If You Want Donate Blood</h1>
+                        <p class="" style=" text-align:center; text-shadow: 4px 4px 10px #000000;  color: #fff; font-weight:600;">Between 18 & 55 years of Age ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Weight more than 50Kg ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">It has been 4 months since the previous blood donation ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Blood hemoglobin level 12.5g/dl or more , </p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Not pregnant ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Healthy ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">It has been at least 3 months since returning to SriLanka after Travelling abroad ,</p>
+                        <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Free from risky behavior ,</p>
+                        <p class="" style="font-size:30px; text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:700;">Being a person is essential.</p>
                     </div>
                 </div>
 
@@ -101,31 +101,31 @@
 
                 <div class="col-12">
                     <div class="mt-5" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
-                        <h1 class="title" style=" text-align:center; color: #fff; font-weight:700;">If There Is A Problem?</h1>
-                        <p class="" style="  text-align:center; color: #fff; font-weight:600;">If there is any problem after donating blood and you develop a Non-Communicable disease withi two weeks , contact the parshad Blood Center you have joined or the blood bank of the nearest Hospital.</p>
+                        <h1 class="title" style=" text-align:center; color: #000000; text-shadow: 4px 4px 10px #000000; font-weight:700;">If There Is A Problem?</h1>
+                        <p class="" style="  text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">If there is any problem after donating blood and you develop a Non-Communicable disease withi two weeks , contact the parshad Blood Center you have joined or the blood bank of the nearest Hospital.</p>
                     </div>
                 </div>
                     <div class="col-12">
                         <div class="mt-5" style="    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.5); border: 2px solid #fff; border-radius:30px;">
-                            <h1 class="title" style=" text-align:center; color: #fff; font-weight:700;">Contact Numbers</h1>
-                            <p class="" style=" text-align:center; color: #fff; font-weight:600;">National Blood Center : 011-2369931-4</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kaburugamuwa : 011-2227232</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kandy : 081-2222261</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Badulla : 055-2222121</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Ampara : 063-2223914</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Chilaw : 032-2223261</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Hambanthota : 047-2222016</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kalutara : 034-2236529</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Kurunegala : 037-2229617</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Karapitiya : 091-2226066</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Maharagama : 011-2849525</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Peradeniya : 081-2388261</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Ragama : 011-2960535</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Rathnapura : 045-2226592</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Anuradhapura : 025-2236424</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Jaffna : 021-2223063</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Trincomalee : 026-2222261</p>
-                            <p class="" style="text-align:center;color: #fff; font-weight:600;">Vauniya : 024-2222261</p>
+                            <h1 class="title" style=" text-align:center; color: #000000; text-shadow: 4px 4px 10px #000000; font-weight:700;">Contact Numbers</h1>
+                            <p class="" style=" text-align:center; text-shadow: 4px 4px 10px #000000;  color: #fff; font-weight:600;">National Blood Center : 011-2369931-4</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Kaburugamuwa : 011-2227232</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Kandy : 081-2222261</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Badulla : 055-2222121</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Ampara : 063-2223914</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Chilaw : 032-2223261</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Hambanthota : 047-2222016</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Kalutara : 034-2236529</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Kurunegala : 037-2229617</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Karapitiya : 091-2226066</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Maharagama : 011-2849525</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Peradeniya : 081-2388261</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Ragama : 011-2960535</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Rathnapura : 045-2226592</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Anuradhapura : 025-2236424</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Jaffna : 021-2223063</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Trincomalee : 026-2222261</p>
+                            <p class="" style="text-align:center; text-shadow: 4px 4px 10px #000000; color: #fff; font-weight:600;">Vauniya : 024-2222261</p>
                         </div>
                     </div>
             </div>
@@ -134,40 +134,37 @@
 
 
     <div class="icons">
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-facebook-box-line"></i></a>
-        <a href="#"><i class="ri-whatsapp-line"></i></a>
+        <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="ri-instagram-line"></i></a>
+        <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="ri-facebook-box-line"></i></a>
+        <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="ri-whatsapp-line"></i></a>
     </div>
 
     <div class="scroll-down">
-        <a href=""><i class="ri-arrow-down-s-fill"></i></a>
+        <a style="text-shadow: 4px 4px 10px #000000;" href=""><i class="ri-arrow-down-s-fill"></i></a>
 
     </div>
     <section class="footer">
         <div class="social">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="fab fa-instagram"></i></a>
+          <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="fab fa-snapchat"></i></a>
+          <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="fab fa-twitter"></i></a>
+          <a style="text-shadow: 4px 4px 10px #000000;" href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
         <ul class="list">
           <li>
-            <a href="{{route('index')}}">Donate now</a>
+            <a style="text-shadow: 4px 4px 10px #000000;" href="{{route('donerpost')}}">Search Blood</a>
           </li>
           <li>
-            <a href="{{route('donerpost')}}">Search Blood</a>
+            <a style="text-shadow: 4px 4px 10px #000000;" href="{{route('aboutus')}}">About Us</a>
           </li>
           <li>
-            <a href="{{route('aboutus')}}">About Us</a>
+            <a style="text-shadow: 4px 4px 10px #000000;" href="{{route('contactus')}}">Contact Us</a>
           </li>
           <li>
-            <a href="{{route('contactus')}}">Contact Us</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
+            <a style="text-shadow: 4px 4px 10px #000000;" href="#">Privacy Policy</a>
           </li>
         </ul>
-        <p class="copyright">All rights reserved @ 2023</p>
+        <p style="color: #000000; text-shadow: 4px 4px 10px #000000;" class="copyright">All rights reserved @ 2023</p>
       </section>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="{{asset('js/app.js')}}"></script>

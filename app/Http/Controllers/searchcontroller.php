@@ -34,9 +34,7 @@ class searchcontroller extends Controller
                                             <p class="card-text">'.$row->donerbloodtype.'</p>
                                             <h6 class="card-subtitle mb-2 text-muted">'.$row->donerposttitle.'</h6>
                                             <p class="card-text">'.$row->donerpostdescription.'</p>
-                                            <a id="location" href="" class="btn">View Location On Map</a>
-
-                                            <a href="'.route('sendmessage' , $row->userid).'" class="btn">Send Message</a>
+                                            <a style="text-shadow: 4px 4px 10px #000000; box-shadow:2px 2px 25px #000;" href="'.route('sendmessage' , $row->userid).'" class="btn">Send Message</a>
                                         </div>
                                     </div>
                                 </div>

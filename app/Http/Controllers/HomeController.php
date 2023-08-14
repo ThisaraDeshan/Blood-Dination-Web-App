@@ -85,7 +85,8 @@ class HomeController extends Controller
 
     public function notifications()
     {
-        $rows = sendmessage::all();
+        $rows = sendmessage::orderBy('id','desc')->take(10)->get();
+
 
         return view('notifications', compact('rows'));
     }

@@ -28,9 +28,9 @@
 
         </div>
         <div class="col-lg-8">
-            <h3 class="text-center" style="color: #ffffff;">Search Blood here!</h3><hr>
+            <h3 class="text-center" style="color: #000000; text-shadow: 4px 4px 10px #000000; ">Search Blood here!</h3><hr>
                 <div class="form-group">
-                    <h4 style="color: #fff;">Type Blood Type Or Location</h4>
+                    <h4 style="color: #000000; text-shadow: 4px 4px 10px #000000; ">Type Blood Type Or Location</h4>
                     <input type="text" name="search" id="search" placeholder="Type Blood Type Or Location" class="form-control" onfocus="this.value=''">
                 </div>
             <div id="search_list">
@@ -47,7 +47,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>Blood Donors Locations On Map</h1>
+            <h1 style="color: #000000; text-shadow: 4px 4px 10px #000000; ">Blood Donors Locations On Map</h1>
 
             <div class="mb-4" id="map">
 
@@ -60,7 +60,7 @@
 <div class="container" style="border-radius: 30px; width:auto;">
     <div class="row">
         <div>
-            <h1>Latest Blood Donation Posts</h1>
+            <h1 style="color: #000000; text-shadow: 4px 4px 10px #000000; ">Latest Blood Donation Posts</h1>
         </div>
         @foreach ($posts as $post)
                     <div class="card m-3"  style="width: 17.7rem;">
@@ -70,11 +70,7 @@
                           <p class="card-text">{{$post->donerpostdescription}}</p>
                           <h6 class="card-subtitle mb-2">{{$post->donername}}</h6>
                           <h6 class="card-subtitle mb-2 text-muted">{{$post->doneraddress}}</h6>
-                          <button onclick="" class="btn">Show Location</button>
-
-                          <a href="{{route('sendmessage' , $post->userid)}}" class="btn">Send Message</a>
-
-
+                          <a style="box-shadow:2px 2px 25px #000; text-shadow: 4px 4px 10px #000000;" href="{{route('sendmessage' , $post->userid)}}" class="btn">Send Message</a>
                         </div>
                     </div>
                     @endforeach
@@ -176,41 +172,6 @@ function closeAllInfoWindows() {
 }
         initMap();
 
-/*     function initialize() {
-      var geocoder = new google.maps.Geocoder();
-      var address = "Malabe";
-       // Replace with the address you want to convert
-
-      geocoder.geocode({ 'address': address }, function (results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          var latitude = results[0].geometry.location.lat();
-          var longitude = results[0].geometry.location.lng();
-
-          // Display the latitude and longitude on the console
-          console.log('Latitude: ' + latitude);
-          console.log('Longitude: ' + longitude);
-
-
-          // You can use the latitude and longitude to display a map or perform other operations.
-          // For example, let's display a map centered at the obtained coordinates.
-          var mapOptions = {
-            center: { lat: latitude, lng: longitude },
-            zoom: 15
-          };
-
-          var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-          new google.maps.Marker({
-            position: { lat: latitude, lng: longitude },
-            map:map
-        });
-        } else {
-          console.error('Geocode was not successful for the following reason: ' + status);
-        }
-      });
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize); */
 </script>
 
 
