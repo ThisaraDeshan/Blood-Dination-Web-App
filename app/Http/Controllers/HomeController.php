@@ -126,7 +126,7 @@ class HomeController extends Controller
         $value3 = ratings::where('raterId',$id)->where('rating',3)->count();
         $value2 = ratings::where('raterId',$id)->where('rating',2)->count();
         $value1 = ratings::where('raterId',$id)->where('rating',1)->count();
-        $posts = ratings::where('raterId',$id)->get();
+        $posts = ratings::where('raterId',$id)->latest()->take(5)->get();
 
 
         return view('donerRatings',compact('user','ratingAvg','value5','value4','value3','value2','value1','posts'));
