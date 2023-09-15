@@ -13,7 +13,7 @@
                 <i class="fas fa-user"></i>
                 <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
                 @error('email')
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" role="alert" style="color: #fff;">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
@@ -22,7 +22,7 @@
                 <i class="fas fa-lock"></i>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
                 @error('password')
-                <span class="invalid-feedback" role="alert">
+                <span class="invalid-feedback" role="alert" style="color: #fff;">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror

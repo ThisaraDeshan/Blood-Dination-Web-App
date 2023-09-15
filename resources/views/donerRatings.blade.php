@@ -7,9 +7,9 @@
     <title>emergency blood donation</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('css/doner.css')}}">
-
+    <link rel="stylesheet" href="{{asset('css/ratings.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -77,9 +77,129 @@
 
     </header>
 
-    <main class="py-4">
-        @yield('content')
-    </main>
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            @if (\Session::has('success'))
+        <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+        </div>
+        @endif
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+
+    <div class="container px-1 py-5 mx-auto">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-10 col-12 text-center mb-5">
+                <div class="card">
+                    <div class="row justify-content-left d-flex">
+                        <div class="col-md-4 d-flex flex-column">
+                            <div class="rating-box">
+                                <h1 class="pt-4">{{ $ratingAvg }}</h1>
+                                <p class="">out of 5</p>
+                            </div>
+                            <div>
+                                <span class="fa fa-star star-active mx-1"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="rating-bar0 justify-content-center">
+                                <table class="text-left mx-auto">
+                                    <tr>
+                                        <td class="rating-label">Excellent  &nbsp;&nbsp;&nbsp;</td>
+                                        <td><span>&#8658;</span>&nbsp;&nbsp;</td>
+                                        <td class="text-right" style="margin-left:10px; font-weight:bold;">{{$value5}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Good  &nbsp;&nbsp;&nbsp;</td>
+                                        <td><span>&#8658;</span>&nbsp;&nbsp;</td>
+                                        <td class="text-right" style="margin-left:10px; font-weight:bold;">{{$value4}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Average  &nbsp;&nbsp;&nbsp;</td>
+                                        <td><span>&#8658;</span>&nbsp;&nbsp;</td>
+                                        <td class="text-right" style="margin-left:10px; font-weight:bold;">{{$value3}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Poor  &nbsp;&nbsp;&nbsp;</td>
+                                        <td><span>&#8658;</span>&nbsp;&nbsp;</td>
+                                        <td class="text-right" style="margin-left:10px; font-weight:bold;">{{$value2}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rating-label">Terrible  &nbsp;&nbsp;&nbsp;</td>
+                                        <td><span>&#8658;</span>&nbsp;&nbsp;</td>
+                                        <td class="text-right" style="margin-left:10px; font-weight:bold;">{{$value1}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="row d-flex">
+                        <div class="d-flex flex-column">
+                            <h3 class="mt-2 mb-0">{{$user->name}}</h3>
+                            <div>
+                            <p class="text-left">
+                                <span class="fa fa-star star-active ml-3"></span>
+                                <span class="text-muted">{{$ratingAvg}}</span>
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach ($posts as $post )
+                    <div class="row text-left" style="border:solid #FFA2A0 2px; border-radius:20px; margin-bottom:10px;">
+                        <h4 class="blue-text mt-3">{{$post->review}}</h4>
+                        <p>Rated {{$post->rating}}/5</p>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="color: #000000;">DONER RATINGS & REVIEWS</h1>
+        <div class="row p-3">
+            <form action="{{route('addRating',$user->id)}}" method="POST">
+                @csrf
+            <label class="label" for="" style="font-weight: 700;">Rate Doner Here</label>
+
+            <select class="form-select" name="rating" style="width:13%;" aria-label="Default select example">
+                <option value="1">
+                    ⭐
+                </option>
+                <option value="2">
+                    ⭐⭐
+                </option>
+                <option value="3">
+                    ⭐⭐⭐
+                </option>
+                <option value="4">
+                    ⭐⭐⭐⭐
+                </option>
+                <option value="5">
+                    ⭐⭐⭐⭐⭐
+                </option>
+            </select>
+
+
+                <div class="input-field">
+                    <label for="" style="font-weight: 700;">Doner Review Comment</label>
+                    <textarea id="reviewComment" type="text" class="form-control"  name="reviewComment" required rows="10" placeholder="Enter Your Doner Review Comment..."></textarea>
+                </div>
+                <button  type="submit" class="btn">Submit Doner Review</button>
+            </form>
+        </div>
+    </div>
+
 
     <div class="container mt-4 mb-4" style=" border-radius:30px;">
         <div class="row">
@@ -185,3 +305,17 @@
 
 </body>
 </html>
+
+
+{{-- <div class="wrapper p-3">
+    <input type="checkbox" name="rating" value="5" />
+    <label for="st1"></label>
+    <input type="checkbox" name="rating" value="4" />
+    <label for="st2"></label>
+    <input type="checkbox" name="rating" value="3" />
+    <label for="st3"></label>
+    <input type="checkbox" name="rating" value="2" />
+    <label for="st4"></label>
+    <input type="checkbox" name="rating" value="1" />
+    <label for="st5"></label>
+</div> --}}

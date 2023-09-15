@@ -6,6 +6,7 @@ use App\Models\donerlist;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\postcontroller;
+use App\Http\Controllers\ratingController;
 use App\Http\Controllers\searchcontroller;
 
 
@@ -63,5 +64,9 @@ route::get('/needer-About',[HomeController::class,'neederAbout'])->name('neederA
 route::get('needer-Contact',[HomeController::class,'neederContact'])->name('neederContact');
 
 route::get('/donerpost',[HomeController::class,'donerpost'])->name('donerpost');
+
+route::get('doner-Ratings/{id}',[HomeController::class,'donerRatings'])->name('donerRatings');
+
+route::post('/addRating/{id}',[ratingController::class,'addRating'])->name('addRating');
 
 
