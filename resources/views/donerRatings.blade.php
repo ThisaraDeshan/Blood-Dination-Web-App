@@ -102,7 +102,7 @@
                     <div class="row justify-content-left d-flex">
                         <div class="col-md-4 d-flex flex-column">
                             <div class="rating-box">
-                                <h1 class="pt-4">{{ $ratingAvg }}</h1>
+                                <h1 class="pt-4">{{ number_format($ratingAvg,2) }}</h1>
                                 <p class="">out of 5</p>
                             </div>
                             <div>
@@ -149,7 +149,7 @@
                             <div>
                             <p class="text-left">
                                 <span class="fa fa-star star-active ml-3"></span>
-                                <span class="text-muted">{{$ratingAvg}}</span>
+                                <span class="text-muted">{{number_format($ratingAvg,2)}}</span>
                             </p>
                             </div>
                         </div>
